@@ -1,7 +1,7 @@
 export default function Nav() {
   return (
     <>
-      <nav className=" flex shadow items-center justify-between gap-4 sm: h-14  md:h-18 overflow-hidden ">
+      <nav className="z-100 flex shadow items-center justify-between gap-6 top-0 sm: h-14  md:h-18 overflow-hidden bg-white w-full fixed">
 
 
         <div className="flex gap-2 items-center ml-2">
@@ -69,7 +69,7 @@ export default function Nav() {
       </nav>
 
    
-       <div className="flex items-center gap-4 mt-4 ml-1 h-12 bg-gray-200 md:hidden" style={{borderRadius:"10px" , width: "98%"}}>
+       <div className="flex items-center gap-4 ml-1 h-12 bg-gray-200 mt-20 md:hidden" style={{borderRadius:"10px" , width: "98%"}}>
             <img className="size-6 ml-3" src="./src/assets/search-icon.png" alt="Search" />
             <input className="h-10 w-md focus:outline-none" type="text" placeholder="Search for products here...." />
         </div>

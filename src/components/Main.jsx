@@ -1,120 +1,158 @@
+import { Link } from "react-router"
+
 export default function Main(){
 
     return(
         <>
 
-        <div className="flex flex-wrap justify-center gap-5 mt-4 md:mt-8 md:gap-10">
+        <div className="flex flex-wrap justify-center gap-5 mt-4 md:mt-8 md:gap-10 ">
 
-
-        <div className="flex flex-col items-center font-medium">
+        <Link to="watches">
+        <div className="flex flex-col gap-1 items-center font-medium text-xs lg:text-sm ">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
           src="https://tse2.mm.bing.net/th/id/OIP.arl6uI-6dTOPpDfHPdO6mgHaHN?rs=1&pid=ImgDetMain&o=7&rm=3" 
           alt="watch" />
-          <p>watches</p>
+          <p>Watches</p>
         </div>
-
-        <div className="flex flex-col items-center font-medium">
+        </Link>
+       
+        <Link to="womenBags">
+        <div className="flex flex-col gap-1 items-center font-medium text-xs lg:text-sm ">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
           src="https://tse4.mm.bing.net/th/id/OIP.GYutxjASFLgGMtalS2-UrwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" 
           alt="bags" />
           <p>Bags</p>
         </div>
-
-        <div className="flex flex-col items-center font-medium">
+        </Link>
+        
+        <Link to="jewellery">
+        <div className="flex flex-col gap-1 items-center font-medium text-xs lg:text-sm ">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
           src="https://th.bing.com/th/id/OIP.u212LfA11ebqafh_hd9F3QHaHa?w=167&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" 
           alt="jwellery" />
-          <p>jwellery</p>
+          <p>Jewellery</p>
         </div>
+        </Link>
 
-        
-        <div className="flex flex-col items-center font-medium">
+        <Link to="womenTopWear">
+        <div className="flex flex-col gap-1 items-center font-medium text-xs lg:text-sm ">
+          <img 
+          className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
+          src="./src/assets/cloths-img/w-topwear.jpg" 
+          alt="topwear image" />
+          <p>Topwear</p>
+        </div>
+        </Link>
+
+         <Link to="kidsData">
+        <div className="flex flex-col gap-1 items-center font-medium text-xs lg:text-sm ">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
           src="./src/assets/cloths-img/kids-topwear.jpg" 
           alt="watch" />
-          <p>kids </p>
-    
-        </div>
-
-        <div className="flex flex-col items-center font-medium">
+          <p>Kids </p>
+         </div>
+         </Link>
+        
+        <Link to="menBottomwear">
+        <div className="flex flex-col gap-1 items-center font-medium leading-none text-xs lg:text-sm">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="./src/assets/cloths-img/m-footwear.jpg" 
+          src="./src/assets/cloths-img/m-lower.jpg" 
           alt="watch" />
-          <p>lower</p>
+          <p>Men's</p>
+          <p>Bottom wear</p>
         </div>
+        </Link>
 
-        <div className="flex flex-col items-center font-medium">
+        <Link to="womenFootwear">
+        <div className="flex flex-col gap-1 items-center font-medium leading-none text-xs lg:text-sm">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
           src="./src/assets/cloths-img/w-footwear.webp" 
           alt="women footwear" />
-          <p>F-shoes</p>
+          <p>Women's</p>
+          <p>Footwear</p>
         </div>
+        </Link>
 
-        <div className="flex flex-col items-center font-medium">
+        <Link to="womenBottomwear">
+        <div className="flex flex-col gap-1 items-center font-medium leading-none text-xs lg:text-sm">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="" 
+          src="./src/assets/cloths-img/w-bottomwear.jpeg" 
           alt="" />
-          <p>watches</p>
+          <p>Women's</p>
+          <p>Bottom wear</p>
         </div>
-
-        <div className="flex flex-col items-center font-medium">
+        </Link>
+        
+        <Link to="menFootwear">
+        <div className="flex flex-col gap-1 items-center font-medium leading-none text-xs lg:text-sm">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="" 
-          alt="" />
-          <p>watches</p>
+          src="./src/assets/cloths-img/m-footwear.jpg" 
+          alt="mens-shoes" />
+          <p>Men's</p>
+          <p>Footwear</p>
         </div>
-
-        <div className="flex flex-col items-center font-medium">
+        </Link>
+        
+        
+        
+        <Link to="menTopWear">
+        <div className="flex flex-col gap-1 items-center font-medium text-xs lg:text-sm ">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="" 
-          alt="" />
-          <p>watches</p>
+          src="./src/assets/cloths-img/m-topwear.jpg" 
+          alt="Men's topwear" />
+          <p>Topwear</p>
         </div>
-
-        <div className="flex flex-col items-center font-medium">
-          <img 
-          className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="" 
-          alt="" />
-          <p>watches</p>
-        </div>
-
+        </Link>
+        
+        
 
       </div>
 
 
 
 
-      <div className="flex flex-wrap justify-center gap-5 mt-5 mb-5">
+      <div className="flex flex-wrap justify-center gap-5 mt-8 mb-5">
       
-
-        <div className="shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150" style={{width:"45%"}}>
-            <img src="./src/assets/mens-collection.jpeg" alt="Mens Collection" />
+        
+        <div className=" shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150" style={{width:"45%"}}>
+          <Link to="menTopWear">
+            <img className="" src="./src/assets/mens-collection.jpeg" alt="Mens Collection"/>
+          </Link>     
         </div>
+        
 
-
+        
         <div className="shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150" style={{width:"45%"}}>
+          <Link to="indianwear">
             <img src="./src/assets/female-collection.jpg" alt="Mens Collection" />
+          </Link>
         </div>
-
-
+        
+         
+        
         <div className="shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150" style={{width:"45%"}}>
-            <img src="./src/assets/mens-collection.jpeg" alt="Mens Collection" />
+          <Link to="kidsData">
+            <img src="./src/assets/kids-collection.webp" alt="Mens Collection" />
+          </Link>
         </div>
+        
 
-
+        
         <div className="shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150" style={{width:"45%"}}>
-            <img src="./src/assets/mens-collection.jpeg" alt="Mens Collection" />
+          <Link to="summerSale">
+            <img src="./src/assets/SummerSale.png" alt="Mens Collection" />
+          </Link>
         </div>
+        
 
       
       </div>

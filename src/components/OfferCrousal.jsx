@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
     const slides = [
     {
       alt: 1,
-      src: 'https://assets.dochipo.com/media/companies/dochipo/templates/6453adcfd36e051ed8241c41/screenshot.png',
+      src: './src/assets/carauser-img/Carauser-1.png',
     },
     {
       alt: 2,
@@ -20,22 +20,22 @@ import 'swiper/css/pagination';
     },
     {
       alt: 3,
-      src: 'https://cdn.create.vista.com/downloads/367a4f96-2652-4931-97db-d27173aa8736_1024.jpeg',
+      src: './src/assets/carauser-img/Carauser-3.png',
     },
   ];
   return (
     <div className='flex justify-center'>
-    <div className="mt-6 rounded-2xl overflow-hidden shadow-lg h-50 md:h-90" style={{width:"95%"}} >
+    <div className="mt-6 rounded-2xl overflow-hidden shadow-lg h-50 md:h-100 md:mt-25" style={{width:"95%"}} >
       <Swiper
         modules={[ Pagination, Autoplay]}
         pagination={{ clickable: true }}
         autoplay={{ delay: 2000 }}
         loop={true}
-        className='md:h-90'
+        className='md:h-100'
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <img src={slide.src} alt={`offer ${slide.alt}`} className="w-full h-full md:object-cover " />
+            <img src={slide.src} alt={`offer ${slide.alt}`} className="w-full h-full lg:h-140" />
           </SwiperSlide>
         ))}
       </Swiper>
