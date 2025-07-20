@@ -7,6 +7,7 @@ import OfferCrousal from "./components/OfferCrousal.jsx"
 import Main from "./components/Main.jsx"
 import Products from "./components/Products.jsx"
 import ProductsDetails from './components/ProductsDetails.jsx';
+import Cart from './components/Cart.jsx'
 
 import {
   indianWear,
@@ -95,6 +96,10 @@ const router=createBrowserRouter([
          {
           path:"/summerSale",
           element:<Products data={summerSale}/>
+         },
+         {
+          path:"/cart",
+          element:<Cart/>
          }
     ]
   }

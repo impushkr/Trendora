@@ -156,6 +156,15 @@ export default function Main(){
 
       
       </div>
+
+      <div 
+      className="bg-gray-300 h-[20vh] w-full flex justify-around mt-20 mb-10 items-center lg:text-2xl font-serif shadow "> 
+        <h1 className="w-50  md:w-120">Scan this barcode to connect with us and stay in trend with Trendora.</h1>
+        <img
+        className="size-[14vh] rounded shadow" 
+        src="./src/assets/qr.png" 
+        alt="QR-Code" />
+      </div>
         
         </>
     )

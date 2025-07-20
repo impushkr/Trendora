@@ -1,13 +1,13 @@
 import { useSearch } from "../context/SearchContext";
-
+import { useCart } from "../context/CartContext";
+import { Link } from "react-router";
 
 
 
 export default function Nav() {
 
   const {input,handlechange,handlesubmit}=useSearch();
-
-
+  const{cartItem}=useCart();
 
 
   
@@ -53,7 +53,7 @@ export default function Nav() {
         </div>
 
 
-        <div className="flex gap-5 font-bold sm: mr-4 ">
+        <div className="flex gap-5 font-bold sm: mr-4 items-center ">
           <div className="flex gap-2 items-center">
             <img
               className="size-6"
@@ -65,13 +65,21 @@ export default function Nav() {
 
           <h2 className="hidden md:block mr-5 ml-5">Wishlist</h2>
 
+         
           <div className="flex items-center gap-1 md:mr-10">
+            <Link to="cart" >
             <img
               className="size-5 "
               src="./src/assets/cart-icon.jpg"
               alt="cart-icon"
-            />
+            /></Link>
+
+            <Link to="cart" >           
             <h2 className="hidden md:block">Cart</h2>
+            </Link> 
+            {cartItem.length >0 ? 
+            (<p className="text-xs text-center mb-4 bg-gray-300 w-4 rounded-2xl">{cartItem.length}</p>): null}
+            
           </div>
         </div>
 

@@ -1,3 +1,5 @@
+import { useCart } from "../context/CartContext";
+
 import {
   indianWear,
   jewellary,
@@ -21,7 +23,7 @@ export default function ProductsDetails(){
 
 const{id}=useParams()
 
-const productDetails = indianWear.find((item)=>item.id==id)||
+const products = indianWear.find((item)=>item.id==id)||
 jewellary.find((item)=>item.id==id)||
 womenBags.find((item)=>item.id==id)||
 womenBottomwear.find((item)=>item.id==id)||
@@ -33,6 +35,7 @@ menTopWear.find((item)=>item.id==id)||
 watches.find((item)=>item.id==id)||
 kidsData.find((item)=>item.id==id);
 
+const{cartItem,additem}=useCart()
 
 return(<>
 
@@ -42,26 +45,39 @@ return(<>
     <div className="widht-full md:w-[55vh] overflow-hidden shadow">    
     <img
     className="object-fit"
-    src={productDetails.imageUrl} 
+    src={products.imageUrl} 
     alt="Product-Image" />
     </div>
     
 
     <div className="bg-white p-5 w-full md:w-[55vh] shadow text-center lg:text-justify">
-        <h2 className="text-3xl font-medium mb-5">{productDetails.title}</h2>
-        <p className="mb-5" >{productDetails.subTitle}</p>
-        <span><strong>₹ {productDetails.discountedPrice}</strong></span>
-        {productDetails.discount > 0 ?
+        <h2 className="text-3xl font-medium mb-5">{products.title}</h2>
+        <p className="mb-5" >{products.subTitle}</p>
+        <span><strong>₹ {products.discountedPrice}</strong></span>
+        {products.discount > 0 ?
         (<>
-            <span className="ml-3 line-through">₹ {productDetails.price}</span>
-            <span className="ml-8 text-green-700">({productDetails.discount} %OFF)</span>
+            <span className="ml-3 line-through">₹ {products.price}</span>
+            <span className="ml-8 text-green-700">({products.discount} %OFF)</span>
          </>
         ):<>
         </>}
         
         <div className="flex justify-around mt-8 lg:mt-99">
-        <button className="font-bold text-white bg-blue-500 w-[20vh] h-[6vh] rounded-2xl shadow">ADD TO CART</button>
-        <button className="font-bold text-white bg-blue-500 w-[20vh] h-[6vh] rounded-2xl shadow">BUY NOW</button>
+        { cartItem.find((item)=>item.id==products.id )?
+        (
+        <button 
+        
+        className="font-bold text-white bg-gray-500 w-[20vh] h-[6vh] rounded-2xl shadow" disabled={true}>
+        ADDED</button>
+        ):
+        (
+        <button 
+        onClick={()=>additem(products)}
+        className="font-bold text-white bg-blue-500 w-[20vh] h-[6vh] rounded-2xl shadow hover:scale-95">
+        ADD TO CART</button>
+        )}
+
+        <button className="font-bold text-white bg-blue-500 w-[20vh] h-[6vh] rounded-2xl shadow hover:scale-95">BUY NOW</button>
         </div>
 
         </div>
