@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import OfferCrousal from "./components/OfferCrousal.jsx"
 import Main from "./components/Main.jsx"
 import Products from "./components/Products.jsx"
+import ProductsDetails from './components/ProductsDetails.jsx';
 
 import {
   indianWear,
@@ -25,6 +26,7 @@ import {
 import { kidsData } from "./data/kids/data";
 import { summerSale } from "./data/summer/data";
 
+
 const router=createBrowserRouter([
   {
     path:"/",
@@ -39,8 +41,16 @@ const router=createBrowserRouter([
           </>)
          },
          {
+          path:"/products",
+          element:<Products/>,
+         },
+         {
+          path:"/products/:id",
+          element:<ProductsDetails/>
+         },
+         {
           path:"/jewellery",
-          element:<Products data={jewellary}/>
+          element:<Products data={jewellary}/>,
          },
          {
           path:"/indianwear",

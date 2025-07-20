@@ -1,10 +1,13 @@
+import { Link } from "react-router";
+
 export default function Products({ data }) {
   console.log(data);
 
   return (
     <>
-      <div className="flex flex-wrap justify-center-safe gap-5 mt-5 mb-20 bg-gray-100 pt-5 pb-5 md:mt-25 ">
+      <div className="flex flex-wrap justify-center-safe gap-5 mt-5 bg-gray-100 pt-10 pb-15 md:mt-15 ">
         {data.map((item) => (
+          <Link to={`/products/${item.id}`}>
           <div className="hover:scale-105 flex flex-col overflow-hidden shadow rounded-2xl h-70 w-43  lg:h-100 lg:w-70 ">
             <div
               className="overflow-hidden "
@@ -34,6 +37,7 @@ export default function Products({ data }) {
               )}
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </>
