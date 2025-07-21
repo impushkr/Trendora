@@ -123,7 +123,7 @@ export default function Main(){
       <div className="flex flex-wrap justify-center gap-5 mt-8 mb-5">
       
         
-        <div className=" shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150" style={{width:"45%"}}>
+        <div className=" shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150 " style={{width:"45%"}}>
           <Link to="menTopWear">
             <img className="" src="./src/assets/mens-collection.jpeg" alt="Mens Collection"/>
           </Link>     
@@ -159,7 +159,7 @@ export default function Main(){
 
       <div 
       className="bg-gray-300 h-[20vh] w-full flex justify-around mt-20 mb-10 items-center lg:text-2xl font-serif shadow "> 
-        <h1 className="w-50  md:w-120">Scan this barcode to connect with us and stay in trend with Trendora.</h1>
+        <h1 className="w-50  md:w-120">Scan this QR Code to connect with us and stay in trend with Trendora.</h1>
         <img
         className="size-[14vh] rounded shadow" 
         src="./src/assets/qr.png" 

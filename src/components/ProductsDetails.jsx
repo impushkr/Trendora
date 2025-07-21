@@ -1,4 +1,5 @@
 import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
 
 import {
   indianWear,
@@ -36,18 +37,43 @@ watches.find((item)=>item.id==id)||
 kidsData.find((item)=>item.id==id);
 
 const{cartItem,additem}=useCart()
+const{wishlistItem , addtoWishlist , removefromWishlist}=useWishlist()
 
 return(<>
 
-<div className="w-full md:p-5 mt-5 md:mt-18 relative">
+<div className="w-full md:p-5 mt-5 md:mt-18">
 
     <div className="flex flex-wrap justify-center   ">
-    <div className="widht-full md:w-[55vh] overflow-hidden shadow">    
+    <div className="widht-full md:w-[55vh] overflow-hidden shadow relative">    
     <img
     className="object-fit"
     src={products.imageUrl} 
-    alt="Product-Image" />
+    alt="Product-Image" 
+    />
+    <div className="flex justify-center shadow absolute size-[6vh]  top-6 right-3  md:top-4 rounded-4xl bg-white overflow-hidden ">
+      {
+      wishlistItem.find((item)=>item.id==products.id)?
+      (
+        <button onClick={()=>removefromWishlist(products)} >
+        <img className="size-9 animate-bounce hover:scale-110 " 
+        src="/src/assets/pinkwishlist-icon.png" 
+        alt="cart-icon" />
+        </button>
+        
+      ):
+      (
+        <button onClick={()=>addtoWishlist(products)}>
+        <img className="size-9 animate-bounce hover:scale-110 " 
+        src="/src/assets/wishlist-icon1.jpg" 
+        alt="cart-icon" />
+        </button>
+      
+      )
+      }
+      </div>
+
     </div>
+    
     
 
     <div className="bg-white p-5 w-full md:w-[55vh] shadow text-center lg:text-justify">

@@ -25,12 +25,13 @@ export default function Nav() {
               alt="menu"
             />
           </button>
-
+        <Link to="/">
           <img
             src="./src/assets/Logo.png"
             alt="Logo"
             className="sm: h-24  md:h-27 w-27 "
           />
+          </Link>
         </div>
 
 
@@ -53,7 +54,7 @@ export default function Nav() {
         </div>
 
 
-        <div className="flex gap-5 font-bold sm: mr-4 items-center ">
+        <div className="flex gap-8 font-bold sm: mr-4 items-center ">
           <div className="flex gap-2 items-center">
             <img
               className="size-6"
@@ -63,19 +64,29 @@ export default function Nav() {
             <h2>Login</h2>
           </div>
 
-          <h2 className="hidden md:block mr-5 ml-5">Wishlist</h2>
+          <div className="flex items-center ">
+            <Link to="wishlist" >
+            <img
+              className="size-7 lg:hidden xl:block"
+              src="./src/assets/wishlist-icon.jpg"
+              alt="wishlish-icon"
+            /></Link>
+            <Link to="wishlist">
+            <h2 className="hidden lg:block">Wishlist</h2>
+            </Link>
+          </div>
 
          
-          <div className="flex items-center gap-1 md:mr-10">
+          <div className="flex items-center md:mr-10">
             <Link to="cart" >
             <img
-              className="size-5 "
-              src="./src/assets/cart-icon.jpg"
+              className="size-6 lg:hidden xl:block "
+              src="./src/assets/carticon.jpg"
               alt="cart-icon"
             /></Link>
 
             <Link to="cart" >           
-            <h2 className="hidden md:block">Cart</h2>
+            <h2 className="hidden lg:block">Cart</h2>
             </Link> 
             {cartItem.length >0 ? 
             (<p className="text-xs text-center mb-4 bg-gray-300 w-4 rounded-2xl">{cartItem.length}</p>): null}

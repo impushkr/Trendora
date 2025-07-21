@@ -1,4 +1,5 @@
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router";
 
 export default function Cart() {
 
@@ -8,8 +9,11 @@ export default function Cart() {
 
 
   return (
-    <div>
-      <div className="p-5 mt-5 mb-10 lg:mt-30 flex flex-col items-center bg-gray">
+    <>
+    {
+
+      cartItem.length > 0 ? (
+        <div className="p-5 mt-5 mb-10 lg:mt-30 flex flex-col items-center bg-gray">
         <div className="flex flex-col pt-10 pr-5 p-10 gap-5 shadow">
           {cartItem.map((product) => (
             <div className="flex">
@@ -95,7 +99,26 @@ export default function Cart() {
 
         
       </div>
+
+      ):
+      (
+        <>
+        <div className="h-[90vh] lg:mt-40 flex flex-col mt-[20vh] p-8 items-center text-center gap-10">
+            <h1 className="font-serif text-3xl rounded-3xl">
+              Your Cart is empty ☹️
+            </h1>
+            <Link to ="/products">
+              <button className=" w-[20vh] h-[5vh] bg-blue-600 text-white font-semibold rounded-2xl text-md shadow">
+                View Products
+              </button>
+            </Link>
+          </div>
+          
+          </>
+      )
+    }
       
-    </div>
+      
+    </>
   );
 }

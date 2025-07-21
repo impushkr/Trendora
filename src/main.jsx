@@ -8,6 +8,7 @@ import Main from "./components/Main.jsx"
 import Products from "./components/Products.jsx"
 import ProductsDetails from './components/ProductsDetails.jsx';
 import Cart from './components/Cart.jsx'
+import WishList from './components/WishList.jsx';
 
 import {
   indianWear,
@@ -43,7 +44,7 @@ const router=createBrowserRouter([
          },
          {
           path:"/products",
-          element:<Products/>,
+          element:<Products data={summerSale}/>,
          },
          {
           path:"/products/:id",
@@ -100,6 +101,10 @@ const router=createBrowserRouter([
          {
           path:"/cart",
           element:<Cart/>
+         },
+         {
+          path:"/wishlist",
+          element:<WishList/>
          }
     ]
   }
