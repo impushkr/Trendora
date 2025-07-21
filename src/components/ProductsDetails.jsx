@@ -41,7 +41,7 @@ const{wishlistItem , addtoWishlist , removefromWishlist}=useWishlist()
 
 return(<>
 
-<div className="w-full md:p-5 mt-5 md:mt-18">
+<div className="w-full md:p-5 mt-5 md:mt-18 ">
 
     <div className="flex flex-wrap justify-center   ">
     <div className="widht-full md:w-[55vh] overflow-hidden shadow relative">    
