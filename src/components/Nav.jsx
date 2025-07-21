@@ -21,13 +21,13 @@ export default function Nav() {
           <button className=" size-7 p-1">
             <img
               className="sm: md:hidden"
-              src="./src/assets/menu.png"
+              src="/menu.png"
               alt="menu"
             />
           </button>
         <Link to="/">
           <img
-            src="./src/assets/Logo.png"
+            src="/Logo.png"
             alt="Logo"
             className="sm: h-24  md:h-27 w-27 "
           />
@@ -41,7 +41,7 @@ export default function Nav() {
         >
           <form onSubmit={handlesubmit} 
           className="flex items-center gap-5 pl-3">
-            <img className="size-6" src="./src/assets/search-icon.png" alt="Search" />
+            <img className="size-6" src="/search-icon.png" alt="Search" />
 
             <input
               className="h-10 w-md focus:outline-none"
@@ -58,7 +58,7 @@ export default function Nav() {
           <div className="flex gap-2 items-center">
             <img
               className="size-6"
-              src="./src/assets/profileicon.png"
+              src="/profileicon.png"
               alt="Profile Icon"
             />
             <h2>Login</h2>
@@ -68,7 +68,7 @@ export default function Nav() {
             <Link to="wishlist" >
             <img
               className="size-7 lg:hidden xl:block"
-              src="./src/assets/wishlist-icon.jpg"
+              src="/wishlist-icon.jpg"
               alt="wishlish-icon"
             /></Link>
             <Link to="wishlist">
@@ -81,7 +81,7 @@ export default function Nav() {
             <Link to="cart" >
             <img
               className="size-6 lg:hidden xl:block "
-              src="./src/assets/carticon.jpg"
+              src="/carticon.jpg"
               alt="cart-icon"
             /></Link>
 
@@ -100,7 +100,7 @@ export default function Nav() {
             <form 
             className="flex items-center gap-4 ml-1 h-12 bg-gray-200 mt-20 md:hidden" style={{borderRadius:"10px" , width: "98%"}}
             onSubmit={handlesubmit}>
-            <img className="size-6 ml-3" src="./src/assets/search-icon.png" alt="Search" />
+            <img className="size-6 ml-3" src="/search-icon.png" alt="Search" />
             <input 
             value={input}
             onChange={handlechange}

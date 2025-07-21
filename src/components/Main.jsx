@@ -41,7 +41,7 @@ export default function Main(){
         <div className="flex flex-col gap-1 items-center font-medium text-xs lg:text-sm ">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="./src/assets/cloths-img/w-topwear.jpg" 
+          src="/w-topwear.jpg" 
           alt="topwear image" />
           <p>Topwear</p>
         </div>
@@ -51,7 +51,7 @@ export default function Main(){
         <div className="flex flex-col gap-1 items-center font-medium text-xs lg:text-sm ">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="./src/assets/cloths-img/kids-topwear.jpg" 
+          src="/kids-topwear.jpg" 
           alt="watch" />
           <p>Kids </p>
          </div>
@@ -61,7 +61,7 @@ export default function Main(){
         <div className="flex flex-col gap-1 items-center font-medium leading-none text-xs lg:text-sm">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="./src/assets/cloths-img/m-lower.jpg" 
+          src="/m-lower.jpg" 
           alt="watch" />
           <p>Men's</p>
           <p>Bottom wear</p>
@@ -72,7 +72,7 @@ export default function Main(){
         <div className="flex flex-col gap-1 items-center font-medium leading-none text-xs lg:text-sm">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="./src/assets/cloths-img/w-footwear.webp" 
+          src="/w-footwear.webp" 
           alt="women footwear" />
           <p>Women's</p>
           <p>Footwear</p>
@@ -83,7 +83,7 @@ export default function Main(){
         <div className="flex flex-col gap-1 items-center font-medium leading-none text-xs lg:text-sm">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="./src/assets/cloths-img/w-bottomwear.jpeg" 
+          src="/w-bottomwear.jpeg" 
           alt="" />
           <p>Women's</p>
           <p>Bottom wear</p>
@@ -94,7 +94,7 @@ export default function Main(){
         <div className="flex flex-col gap-1 items-center font-medium leading-none text-xs lg:text-sm">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="./src/assets/cloths-img/m-footwear.jpg" 
+          src="/m-footwear.jpg" 
           alt="mens-shoes" />
           <p>Men's</p>
           <p>Footwear</p>
@@ -107,25 +107,24 @@ export default function Main(){
         <div className="flex flex-col gap-1 items-center font-medium text-xs lg:text-sm ">
           <img 
           className="shadow-lg rounded-2xl h-15 w-15 md:h-18 md:w-18 overflow-hidden"
-          src="./src/assets/cloths-img/m-topwear.jpg" 
+          src="/m-topwear.jpg" 
           alt="Men's topwear" />
           <p>Topwear</p>
         </div>
         </Link>
         
         
-
       </div>
 
 
-
+{/* ///////////////////////////////////////////////////////////////////////////// */}
 
       <div className="flex flex-wrap justify-center gap-5 mt-8 mb-5">
       
         
         <div className=" shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150 " style={{width:"45%"}}>
           <Link to="menTopWear">
-            <img className="" src="./src/assets/mens-collection.jpeg" alt="Mens Collection"/>
+            <img className="" src="/mens-collection.jpeg" alt="Mens Collection"/>
           </Link>     
         </div>
         
@@ -133,7 +132,7 @@ export default function Main(){
         
         <div className="shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150" style={{width:"45%"}}>
           <Link to="indianwear">
-            <img src="./src/assets/female-collection.jpg" alt="Mens Collection" />
+            <img src="/female-collection.jpg" alt="Mens Collection" />
           </Link>
         </div>
         
@@ -141,7 +140,7 @@ export default function Main(){
         
         <div className="shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150" style={{width:"45%"}}>
           <Link to="kidsData">
-            <img src="./src/assets/kids-collection.webp" alt="Mens Collection" />
+            <img src="/kids-collection.webp" alt="Mens Collection" />
           </Link>
         </div>
         
@@ -149,7 +148,7 @@ export default function Main(){
         
         <div className="shadow-lg rounded-2xl h-50 overflow-hidden md:h-80 lg:h-120 xl:h-150" style={{width:"45%"}}>
           <Link to="summerSale">
-            <img src="./src/assets/SummerSale.png" alt="Mens Collection" />
+            <img src="/SummerSale.png" alt="Mens Collection" />
           </Link>
         </div>
         
@@ -162,7 +161,7 @@ export default function Main(){
         <h1 className="w-50  md:w-120">Scan this QR Code to connect with us and stay in trend with Trendora.</h1>
         <img
         className="size-[14vh] rounded shadow" 
-        src="./src/assets/qr.png" 
+        src="/qr.png" 
         alt="QR-Code" />
       </div>
         

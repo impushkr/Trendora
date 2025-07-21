@@ -12,15 +12,15 @@ import 'swiper/css/pagination';
     const slides = [
     {
       alt: 1,
-      src: './src/assets/carauser-img/Carauser-1.png',
+      src: '/Carauser-1.png',
     },
     {
       alt: 2,
-      src: './src/assets/carauser-img/Carauser-2.png',
+      src: '/Carauser-2.png',
     },
     {
       alt: 3,
-      src: './src/assets/carauser-img/Carauser-3.png',
+      src: '/Carauser-3.png',
     },
   ];
   return (

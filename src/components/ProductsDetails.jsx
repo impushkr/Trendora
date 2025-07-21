@@ -56,7 +56,7 @@ return(<>
       (
         <button onClick={()=>removefromWishlist(products)} >
         <img className="size-9 animate-bounce hover:scale-110 " 
-        src="/src/assets/pinkwishlist-icon.png" 
+        src="/pinkwishlist-icon.png" 
         alt="cart-icon" />
         </button>
         
@@ -64,7 +64,7 @@ return(<>
       (
         <button onClick={()=>addtoWishlist(products)}>
         <img className="size-9 animate-bounce hover:scale-110 " 
-        src="/src/assets/wishlist-icon1.jpg" 
+        src="/wishlist-icon1.jpg" 
         alt="cart-icon" />
         </button>
       
