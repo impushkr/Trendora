@@ -5,7 +5,7 @@ export default function PaymentPage(){
 
         <>
 
-        <div className="md:mt-30 h-[80vh] w-full flex items-center justify-center font-medium text-3xl">
+        <div className="p-10 md:mt-30 h-[80vh] w-full flex items-center justify-center font-medium text-3xl">
 
             <h1 >
 
