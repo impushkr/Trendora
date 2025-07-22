@@ -9,6 +9,7 @@ import Products from "./components/Products.jsx"
 import ProductsDetails from './components/ProductsDetails.jsx';
 import Cart from './components/Cart.jsx'
 import WishList from './components/WishList.jsx';
+import PaymentPage from './components/PaymentPage.jsx';
 
 import {
   indianWear,
@@ -105,6 +106,10 @@ const router=createBrowserRouter([
          {
           path:"/wishlist",
           element:<WishList/>
+         },
+         {
+          path:"/payment",
+          element:<PaymentPage/>
          }
     ]
   }

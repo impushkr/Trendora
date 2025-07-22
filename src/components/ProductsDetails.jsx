@@ -1,5 +1,6 @@
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
+import { Link } from "react-router";
 
 import {
   indianWear,
@@ -102,8 +103,9 @@ return(<>
         className="font-bold text-white bg-blue-500 w-[20vh] h-[6vh] rounded-2xl shadow hover:scale-95">
         ADD TO CART</button>
         )}
-
+        <Link to="/payment">
         <button className="font-bold text-white bg-blue-500 w-[20vh] h-[6vh] rounded-2xl shadow hover:scale-95">BUY NOW</button>
+        </Link>
         </div>
 
         </div>

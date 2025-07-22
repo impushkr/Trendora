@@ -1,4 +1,4 @@
-import{FaInstagram , FaFacebookSquare ,FaWhatsapp , FaLinkedin } from "react-icons/fa"
+import{FaInstagram , FaFacebookSquare ,FaGithub , FaLinkedin } from "react-icons/fa"
 import { Link } from "react-router"
 export default function Footer(){
     return(
@@ -74,8 +74,8 @@ export default function Footer(){
                         </Link>
                       </li>
                       <li>
-                        <Link to="#">
-                          <FaWhatsapp />
+                        <Link to="https://github.com/impushkr">
+                          <FaGithub />
                         </Link>
                       </li>
                       <li>
