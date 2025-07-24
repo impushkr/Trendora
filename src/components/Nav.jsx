@@ -10,76 +10,8 @@ export default function Nav() {
   const [slide, setSlide] = useState(false);
 
   return (
-    <>
-      <div
-        className={` fixed h-full w-full top-0 z-105 ${
-          !slide ? "pointer-events-none" : null
-        }`}
-        onClick={() => (slide ? setSlide(!slide) : null)}
-      >
-        <div
-          className={`flex flex-col bg-white shadow h-[60vh] w-[30vh] font-medium items-center top-0 transition-transform duration-300 ${
-            slide ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
-          <div className="flex gap-2 h-15 w-full items-center justify-center border-b relative">
-            <img className="size-6" src="/profileicon.png" alt="Profile Icon" />
-            <h2>Login</h2>
-            <button
-              className="absolute top-0  right-1 text-3xl text-shadow-2xs  rounded w-[3vh]"
-              onClick={() => setSlide(!slide)}
-            >
-              ×
-            </button>
-          </div>
-          <button
-            className="shadow h-14 w-full"
-            onClick={() => setSlide(!slide)}
-          >
-            <Link to="/">Home</Link>
-          </button>
-          <button
-            className="shadow h-14 w-full"
-            onClick={() => setSlide(!slide)}
-          >
-            <Link to="#">Your Orders</Link>
-          </button>
-          <button
-            className="shadow h-14 w-full"
-            onClick={() => setSlide(!slide)}
-          >
-            <Link to="/wishlist">Your wishlist</Link>
-          </button>
-          <button
-            className="shadow h-14 w-full"
-            onClick={() => setSlide(!slide)}
-          >
-            <Link to="/cart">Your cartlist</Link>
-          </button>
-          <button
-            className="shadow h-14 w-full"
-            onClick={() => setSlide(!slide)}
-          >
-            <Link to="#">About Us</Link>
-          </button>
-          <button
-            className="shadow h-14 w-full"
-            onClick={() => setSlide(!slide)}
-          >
-            <Link to="https://www.linkedin.com/in/pushkar-singh-2572542b1">
-              Contack us
-            </Link>
-          </button>
-          <button
-            className="shadow h-14 w-full"
-            onClick={() => setSlide(!slide)}
-          >
-            <Link to="#">Help !</Link>
-          </button>
-        </div>
-      </div>
-
-      <nav className="z-100 flex shadow items-center justify-between gap-6 top-0 sm: h-14  md:h-18 overflow-hidden bg-white w-full fixed">
+    <nav className=" flex flex-col items-center">
+      <div className="z-100 flex shadow items-center justify-between gap-6 top-0 sm: h-14  md:h-18 overflow-hidden bg-white w-full fixed">
         <div className="flex gap-2 items-center ml-2">
           <button onClick={() => setSlide(!slide)} className=" size-7 p-1">
             <img src="/menu.png" alt="menu" />
@@ -94,9 +26,78 @@ export default function Nav() {
         </div>
 
         <div
-          className="hidden md:block bg-gray-200 w-md h-10 lg:w-svh"
-          style={{ borderRadius: "10px", overflow: "hidden" }}
+          className={` fixed h-full w-full top-0 z-105 ${
+            !slide ? "pointer-events-none" : null
+          }`}
+          onClick={() => (slide ? setSlide(!slide) : null)}
         >
+          <div
+            className={`flex flex-col bg-white shadow h-[60vh] w-[30vh] font-medium items-center top-0  duration-300 ${
+              slide ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            <div className="flex gap-2 h-15 w-full items-center justify-center border-b relative">
+              <img
+                className="size-6"
+                src="/profileicon.png"
+                alt="Profile Icon"
+              />
+              <h2>Login</h2>
+              <button
+                className="absolute top-0  right-1 text-3xl text-shadow-2xs  rounded w-[3vh]"
+                onClick={() => setSlide(!slide)}
+              >
+                ×
+              </button>
+            </div>
+            <button
+              className="shadow h-14 w-full"
+              onClick={() => setSlide(!slide)}
+            >
+              <Link to="/">Home</Link>
+            </button>
+            <button
+              className="shadow h-14 w-full"
+              onClick={() => setSlide(!slide)}
+            >
+              <Link to="#">Your Orders</Link>
+            </button>
+            <button
+              className="shadow h-14 w-full"
+              onClick={() => setSlide(!slide)}
+            >
+              <Link to="/wishlist">Your wishlist</Link>
+            </button>
+            <button
+              className="shadow h-14 w-full"
+              onClick={() => setSlide(!slide)}
+            >
+              <Link to="/cart">Your cartlist</Link>
+            </button>
+            <button
+              className="shadow h-14 w-full"
+              onClick={() => setSlide(!slide)}
+            >
+              <Link to="#">About Us</Link>
+            </button>
+            <button
+              className="shadow h-14 w-full"
+              onClick={() => setSlide(!slide)}
+            >
+              <Link to="https://www.linkedin.com/in/pushkar-singh-2572542b1">
+                Contack us
+              </Link>
+            </button>
+            <button
+              className="shadow h-14 w-full"
+              onClick={() => setSlide(!slide)}
+            >
+              <Link to="#">Help !</Link>
+            </button>
+          </div>
+        </div>
+
+        <div className="hidden md:block bg-gray-200 w-md h-10 lg:w-svh rounded-2xl overflow-hidden">
           <form
             onSubmit={handlesubmit}
             className="flex items-center gap-5 pl-3"
@@ -104,7 +105,7 @@ export default function Nav() {
             <img className="size-6" src="/search-icon.png" alt="Search" />
 
             <input
-              className="h-10 w-md focus:outline-none"
+              className="h-10 w-md focus:outline-none "
               type="text"
               placeholder="  Search for products here..."
               value={input}
@@ -151,11 +152,10 @@ export default function Nav() {
             ) : null}
           </div>
         </div>
-      </nav>
+      </div>
 
       <form
-        className="flex items-center gap-4 ml-1 h-12 bg-gray-200 mt-20 md:hidden"
-        style={{ borderRadius: "10px", width: "98%" }}
+        className="flex rounded-2xl w-[95%] items-center gap-4 ml-1 h-12 bg-gray-200 mt-17 md:hidden"
         onSubmit={handlesubmit}
       >
         <img className="size-6 ml-3" src="/search-icon.png" alt="Search" />
@@ -167,6 +167,6 @@ export default function Nav() {
           placeholder="Search for products here...."
         />
       </form>
-    </>
+    </nav>
   );
 }

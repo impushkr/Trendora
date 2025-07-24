@@ -25,7 +25,7 @@ import 'swiper/css/pagination';
   ];
   return (
     <div className='flex justify-center'>
-    <div className="mt-6 rounded-2xl overflow-hidden shadow-lg h-50 md:h-100 md:mt-25" style={{width:"95%"}} >
+    <div className="mt-5 rounded-2xl w-[95%] overflow-hidden shadow-lg h-50 md:h-100 md:mt-25 md:w-[90%]" >
       <Swiper
         modules={[ Pagination, Autoplay]}
         pagination={{ clickable: true }}

@@ -2,15 +2,15 @@ import { useWishlist } from "../context/WishlistContext";
 import { Link } from "react-router";
 
 export default function WishList() {
-  const { wishlistItem, addtoWishlist, removefromWishlist } = useWishlist();
+  const { wishlistItem} = useWishlist();
 
   return (
     <>
-      {wishlistItem.length > 1 ? (
-        <div className="flex flex-wrap justify-center-safe gap-5 mt-5 bg-gray-100 pt-10 pb-15 md:mt-15 ">
+      {wishlistItem.length > 0 ? (
+        <div className="flex flex-wrap justify-center-safe gap-5 pt-5 pb-15 md:mt-18 ">
           {wishlistItem.map((item) => (
             <Link to={`/products/${item.id}`}>
-              <div className="hover:scale-105 flex flex-col overflow-hidden shadow rounded-2xl h-70 w-43  lg:h-100 lg:w-70 ">
+              <div className="hover:scale-105 flex flex-col overflow-hidden rounded-2xl h-70 w-43  lg:h-100 lg:w-70 ">
                 <div
                   className="overflow-hidden relative"
                   style={{ height: "80%", width: "100%" }}
