@@ -5,7 +5,7 @@ export default function Cart() {
 
   const { cartItem, additem, reduce, remove } = useCart();
   
-  const total = cartItem.reduce((sum,item)=>sum+item.discountedPrice,0);
+  const total = cartItem.reduce((sum,item)=>sum+item.totaldiscount,0);
 
 
   return (
@@ -45,12 +45,12 @@ export default function Cart() {
                 <p className="text-gray-500">{product.subTitle.slice(0, 30)}</p>
                 <div>
                   <span>
-                    <strong>₹ {product.discountedPrice}</strong>
+                    <strong>₹ {product.totaldiscount}</strong>
                   </span>
                   {product.discount > 0 ? (
                     <>
                       <span className="ml-3 line-through text-gray-500">
-                        ₹{product.price}
+                        ₹{product.actualprice}
                       </span>
                       <p className="ml-2 text-green-700">
                         ({product.discount} %OFF)
@@ -82,7 +82,6 @@ export default function Cart() {
             <div className="text-gray-500 mt-5">
               <p>₹ {total}</p>
               <p>₹ 85</p>
-              <p></p>
             </div>
           </div>
 

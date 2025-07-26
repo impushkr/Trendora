@@ -19,17 +19,17 @@ export function CartProvider({children}){
 
             if(existing){
                 return previous.map((items)=>items.id===product.id? 
-            {...items, quantity: items.quantity+1 ,discountedPrice : product.discountedPrice*(product.quantity+1) , price:product.price*(items.quantity+1)}:items)
+            {...items, quantity: items.quantity+1 , totaldiscount : items.discountedPrice*(items.quantity+1) , actualprice:items.price*(items.quantity+1)}:items)
             }
 
-            return[...previous,{...product,quantity:1}]
+            return[...previous,{...product,quantity:1,totaldiscount:product.discountedPrice,actualprice:product.price}]
         })
     }
 
     function reduce(item){
         setCartItem((previous)=>{
             return previous.map((products)=>products.id==item.id?
-            {...products,quantity:products.quantity-1}:products)
+            {...products,quantity:products.quantity-1,totaldiscount:products.totaldiscount-item.discountedPrice,actualprice:products.actualprice-item.price}:products)
         })
     }
  
