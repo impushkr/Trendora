@@ -5,10 +5,10 @@ export default function Products({ data }) {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center-safe gap-5 pt-6 mb-15 md:pt-10 md:mt-15 ">
+      <div className="flex flex-wrap justify-center-safe gap-5 pt-6 mb-15 md:pt-10 md:mt-17 ">
         {data.map((item) => (
           <Link to={`/products/${item.id}`}>
-          <div className="hover:scale-105 flex flex-col overflow-hidden rounded-2xl h-70 w-43  lg:h-100 lg:w-70 ">
+          <div className="hover:scale-105 flex flex-col hover:shadow overflow-hidden rounded-2xl h-70 w-43  lg:h-100 lg:w-70 ">
             <div
               className="overflow-hidden "
               style={{ height: "80%", width: "100%" }}
