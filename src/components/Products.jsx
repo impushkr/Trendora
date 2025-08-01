@@ -16,7 +16,7 @@ export default function Products({ data }) {
               <img src={item.imageUrl} alt="Item-Image" />
             </div>
 
-            <div className="pl-2 bg-white lg:ml-3">
+            <div className="pl-2 bg-white">
               <h4 className="font-medium lg:text-lg">{item.title}</h4>
               <p className="text-sm">{item.subTitle.slice(0, 15) + "..."}</p>
               <span className="font-semibold sm:text-sm lg:text-lg">
