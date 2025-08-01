@@ -105,7 +105,7 @@ export default function Nav() {
             <img className="size-6" src="/search-icon.png" alt="Search" />
 
             <input
-              className="h-10 w-md focus:outline-none "
+              className="h-10 w-[25vw] focus:outline-none "
               type="text"
               placeholder="  Search for products here..."
               value={input}
@@ -114,7 +114,7 @@ export default function Nav() {
           </form>
         </div>
 
-        <div className="flex gap-8 font-bold sm: mr-4 items-center ">
+        <div className="flex gap-5 font-bold items-center mr-5 lg:mr-8 lg:gap-10">
           <div className="flex gap-2 items-center">
             <img className="size-6" src="/profileicon.png" alt="Profile Icon" />
             <h2>Login</h2>
@@ -133,7 +133,7 @@ export default function Nav() {
             </Link>
           </div>
 
-          <div className="flex items-center md:mr-10">
+          <div className="flex items-center ">
             <Link to="cart">
               <img
                 className="size-6 lg:hidden xl:block "

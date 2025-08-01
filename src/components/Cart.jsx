@@ -14,7 +14,7 @@ export default function Cart() {
     {
 
       cartItem.length > 0 ? (
-        <div className="p-5 mt-5 mb-10 lg:mt-30 flex flex-col items-center bg-gray">
+        <div className="p-5 mt-5 mb-10 md:mt-30 flex flex-col items-center bg-gray">
         <div className="flex flex-col pt-10 pr-5 p-10 gap-5 shadow">
           {cartItem.map((product) => (
             <div className="flex">

@@ -10,7 +10,7 @@ export default function WishList() {
         <div className="flex flex-wrap justify-center-safe gap-5 pt-5 pb-15 md:mt-18 ">
           {wishlistItem.map((item) => (
             <Link to={`/products/${item.id}`}>
-              <div className="hover:scale-105 flex flex-col overflow-hidden rounded-2xl h-70 w-43  lg:h-100 lg:w-70 ">
+              <div className="hover:scale-105 flex flex-col overflow-hidden rounded-2xl h-70 w-43  md:h-80 md:w-50 lg:h-90 lg:w-60 ">
                 <div
                   className="overflow-hidden relative"
                   style={{ height: "80%", width: "100%" }}
