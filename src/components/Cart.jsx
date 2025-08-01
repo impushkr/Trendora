@@ -1,11 +1,12 @@
 import { useCart } from "../context/CartContext";
-import { Link } from "react-router";
+import {useNavigate } from "react-router";
 
 export default function Cart() {
 
   const { cartItem, additem, reduce, remove } = useCart();
   
   const total = cartItem.reduce((sum,item)=>sum+item.totaldiscount,0);
+  const navigate = useNavigate();
 
 
   return (
@@ -90,7 +91,7 @@ export default function Cart() {
             <p>₹{total+85}</p>
           </div>
 
-          <button className="p-2 mt-5 h-10  font-bold text-white bg-blue-500 rounded-2xl">
+          <button className="mt-5 h-10  font-bold text-white bg-blue-500 rounded-2xl" onClick={()=>{navigate("/payment")}}>
             CLICK HERE TO PROCEED
           </button>
           
